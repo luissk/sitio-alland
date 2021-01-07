@@ -1,0 +1,135 @@
+.cuerpo{
+    .fond{background-color: rgba(#2e2b2b,.9);}
+    margin-top: 15px;
+    .content-search{
+        //background-color: $color-general;
+        padding: 10px;
+        height: 120px;
+        color: #fff;
+        .form-search{
+            display: flex;
+            &> div{
+                padding: 5px;
+                width: 33.3%;
+                //outline: 1px solid black;
+                .form-control, .btn{
+                    height: 40px;
+                    width: 100%;
+                }
+            }
+        }        
+    }
+    .black_h4{
+        background-color: black;
+        color: $color-general;       
+        font-size: 19px;
+        line-height: 1;
+        padding: 10px;
+        margin-bottom: 0;
+    }
+    .more-selled{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        //background-color: #eee;
+        padding: 10px 0;
+        &> div{
+            //outline: 1px solid red;
+            flex: 1 0 16.6%;
+            text-align: center;
+            padding: 5px 0;
+            img{
+                transition: all .3s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .more-design{
+        background-color: $color-general;
+        p{
+            font-size: 16px;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+    }
+    .p-principal{
+        font-size: 16px;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+
+    .setting-funda{
+        padding: 20px 0;
+        text-align: center;
+        background-color: $color-general;
+        p{margin-bottom: 0;}
+        .setting-icon,.setting-link{
+            display: inline-block;
+            font-size: 1.9em;
+            font-weight: bolder;
+            transition: all .3s;
+        }
+        .setting-icon:hover{
+            transform: rotate(-30deg);
+        }
+        .setting-link:hover{color: $color-orange;}
+        .setting-p{
+            font-size: 1.1em;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+    }
+
+    .info-page, .info-text{
+        background-color: #dddbdb;
+        padding-top: 20px;
+        h2{
+            font-size: 1.5em;
+            padding: 5px 0;
+            text-align: center;
+            font-size: 1.4em;
+        }
+        img{
+            width: 90px;
+        }
+        p:nth-of-type(2){
+            font-weight: 700;         
+        }
+    }
+    .info-text{
+        background-color: #fff;
+        p{
+            font-size: 13px;
+            text-align: justify;
+        }
+    }
+    
+    @media screen and (max-width: 767px){
+        .content-search{
+            height: auto;
+            margin-bottom: 10px;
+            .form-search{
+                display: block;
+                &> div{
+                    width: 100%;
+                }
+            }
+        }
+        .more-selled{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &> div{
+                //outline: 1px solid red;
+                flex: 1 0 33.333%;
+                text-align: center;
+                img{
+                    max-width: 80%;
+                }
+            }
+        }
+    }    
+}

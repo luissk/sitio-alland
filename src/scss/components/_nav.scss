@@ -1,0 +1,62 @@
+.nav{
+    background-color: $color-general;
+    z-index: 10;
+
+    .menu{
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content: space-between;
+        list-style: none;
+        margin-bottom: 0;
+        li{
+            position: relative;
+            /*&:hover .menu-sub{
+                display: block;
+            }*/
+            .menu-link{
+                color: #222;
+                //border: 1px solid blue;
+                display: block;
+                padding: 10px;
+            }
+            .menu-sub{
+                background-color: #eee;
+                //display: none;
+                //outline: 1px solid yellow;
+                position: absolute;
+                width: auto;
+                z-index: 10;
+                padding: 5px;
+            }
+        }        
+    }
+
+    @media screen and (max-width: 992px){
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: 2px 0 5px #aaa;
+        .container-fluid{
+            padding: 0;
+        }
+        .menu{
+            display: block;
+            li{              
+                .menu-link{
+                    background-color: #ccc;
+                    border-bottom: 1px solid #aaa;
+                    [class*="fa-caret-"]{
+                        position: absolute;
+                        top: 15px;
+                        left: 92%;
+                    }
+                }
+                .menu-sub{
+                    //display: none;
+                    position: initial;
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+}
